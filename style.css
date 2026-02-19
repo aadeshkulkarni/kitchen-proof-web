@@ -96,6 +96,28 @@ nav {
 }
 .hero-actions { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
 
+/* ── Pain Strip ──────────────────────────────────────────── */
+.pain-strip {
+  padding: 40px 0;
+  background: rgba(255,255,255,0.04);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+.pain-headline {
+  font-size: clamp(18px, 2.5vw, 22px);
+  font-weight: 700;
+  letter-spacing: -0.4px;
+  margin-bottom: 10px;
+  color: var(--fg);
+}
+.pain-body {
+  font-size: 15px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+.pain-body strong { color: var(--fg); }
+
 /* ── Waitlist ─────────────────────────────────────────────── */
 .waitlist { padding: 80px 0; border-top: 1px solid var(--border); background: var(--bg-2); }
 .waitlist-inner {
@@ -144,6 +166,65 @@ nav {
 
 @media (max-width: 768px) {
   .waitlist-inner { grid-template-columns: 1fr; gap: 36px; }
+}
+
+/* ── Protection / Value ──────────────────────────────────── */
+.protection {
+  padding: 80px 0;
+  border-top: 1px solid var(--border);
+  background: var(--bg-2);
+}
+.protection h2 {
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  margin-bottom: 40px;
+  max-width: 520px;
+}
+.protection-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 48px;
+  max-width: 600px;
+}
+.protection-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  border-radius: 10px;
+  background: rgba(255,60,60,0.06);
+  border: 1px solid rgba(255,60,60,0.12);
+  font-size: 15px;
+  color: var(--fg);
+  font-weight: 500;
+}
+.protection-x {
+  font-size: 16px;
+  color: rgba(255,100,100,0.8);
+  font-weight: 700;
+  flex-shrink: 0;
+  width: 20px;
+  text-align: center;
+}
+.protection-closing {
+  border-left: 3px solid rgba(255,255,255,0.2);
+  padding-left: 20px;
+  max-width: 500px;
+}
+.protection-closing p {
+  font-size: 17px;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 8px;
+}
+.protection-cta-line {
+  font-size: 17px !important;
+  color: var(--fg) !important;
+  font-style: normal !important;
+  font-weight: 600;
+  margin-bottom: 0 !important;
 }
 
 /* ── Features ─────────────────────────────────────────────── */
@@ -280,6 +361,45 @@ footer {
 }
 .footer-links { display: flex; gap: 20px; }
 .footer-links a:hover { color: var(--fg); }
+
+/* ── About / Positioning tweaks ──────────────────────────── */
+.about-closer {
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: var(--fg) !important;
+  letter-spacing: -0.3px;
+  margin-top: 8px;
+}
+
+/* ── Final CTA ────────────────────────────────────────────── */
+.final-cta {
+  padding: 96px 0;
+  text-align: center;
+  border-top: 1px solid var(--border);
+  background: var(--bg-2);
+  position: relative;
+  overflow: hidden;
+}
+.final-cta::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 60% at 50% 50%, rgba(255,255,255,0.05) 0%, transparent 70%);
+  pointer-events: none;
+}
+.final-cta h2 {
+  font-size: clamp(32px, 5vw, 52px);
+  font-weight: 800;
+  letter-spacing: -1.5px;
+  margin-bottom: 16px;
+}
+.final-cta p {
+  font-size: 18px;
+  color: var(--muted);
+  margin-bottom: 36px;
+  max-width: 480px;
+  margin-left: auto; margin-right: auto;
+}
+.final-cta-btn { padding: 14px 36px; font-size: 16px; }
 
 /* ── Legal pages ──────────────────────────────────────────── */
 .legal { padding: 72px 0 96px; max-width: 720px; margin: 0 auto; }
