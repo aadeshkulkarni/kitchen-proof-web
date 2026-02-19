@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KitchenProof — WhatsApp-First Compliance for Cloud Kitchens</title>
+  <meta name="description" content="KitchenProof helps dark kitchens and cloud restaurants track daily operations, collect photo proof, and ensure hygiene compliance — all through WhatsApp." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ── Navigation ───────────────────────────────────────── -->
+  <nav>
+    <div class="container nav-inner">
+      <div class="logo">
+        <div class="logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 6h18M3 12h18M3 18h18"/>
+          </svg>
+        </div>
+        KitchenProof
+      </div>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#how-it-works">How It Works</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a href="#waitlist" class="btn btn-primary">Join Waitlist</a>
+    </div>
+  </nav>
+
+  <!-- ── Hero ─────────────────────────────────────────────── -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <span class="pill">🍽️ Built for Cloud &amp; Dark Kitchens</span>
+      </div>
+      <h1>Operations compliance,<br /><span>automated through WhatsApp.</span></h1>
+      <p>KitchenProof keeps your kitchen team accountable — daily task checklists, photo proof collection, and real-time compliance dashboards, all without leaving WhatsApp.</p>
+      <div class="hero-actions">
+        <a href="#contact" class="btn btn-primary">Request a Demo</a>
+        <a href="#features" class="btn btn-outline">See Features</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Waitlist ──────────────────────────────────────────── -->
+  <section class="waitlist" id="waitlist">
+    <div class="container">
+      <div class="waitlist-inner">
+        <div class="waitlist-text">
+          <div class="hero-badge" style="margin-bottom:16px;">
+            <span class="pill">🚀 Early Access</span>
+          </div>
+          <h2>Be the first to launch your kitchen on KitchenProof.</h2>
+          <p>We're onboarding a limited number of cloud kitchens during our early access phase. Join the waitlist and get <strong>3 months free</strong> when we launch.</p>
+          <ul class="waitlist-perks">
+            <li>✓ 3 months free on any plan</li>
+            <li>✓ Priority onboarding support</li>
+            <li>✓ Shape the product with direct feedback</li>
+          </ul>
+        </div>
+        <div class="waitlist-form-wrap">
+          <form id="waitlist-form" class="waitlist-form" novalidate>
+            <div class="form-field">
+              <label for="wl-name">Your name</label>
+              <input type="text" id="wl-name" name="name" placeholder="Ravi Sharma" required autocomplete="name" />
+            </div>
+            <div class="form-field">
+              <label for="wl-email">Work email</label>
+              <input type="email" id="wl-email" name="email" placeholder="ravi@kitchenco.in" required autocomplete="email" />
+            </div>
+            <div class="form-field">
+              <label for="wl-kitchen">Kitchen / Brand name</label>
+              <input type="text" id="wl-kitchen" name="kitchen" placeholder="The Burger Lab" />
+            </div>
+            <div class="form-field">
+              <label for="wl-locations">Number of locations</label>
+              <select id="wl-locations" name="locations">
+                <option value="" disabled selected>Select</option>
+                <option value="1">1</option>
+                <option value="2-5">2 – 5</option>
+                <option value="6-20">6 – 20</option>
+                <option value="20+">20+</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary waitlist-submit" id="wl-btn">
+              <span id="wl-btn-text">Join the Waitlist</span>
+              <span id="wl-spinner" style="display:none;">⏳</span>
+            </button>
+            <p id="wl-success" class="wl-success" style="display:none;">🎉 You're on the list! We'll be in touch soon.</p>
+            <p id="wl-error" class="wl-error" style="display:none;">Something went wrong. Please try emailing us directly.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Features ─────────────────────────────────────────── -->
+  <section class="features" id="features">
+    <div class="container">
+      <p class="section-label">What we do</p>
+      <h2>Everything your kitchen needs to stay compliant.</h2>
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">✅</div>
+          <h3>Daily Task Checklists</h3>
+          <p>Assign recurring daily tasks to kitchen staff — opening checks, temperature logs, cleaning schedules — and track completion in real time.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📸</div>
+          <h3>Photo Proof Collection</h3>
+          <p>Staff submit photographic proof for tasks directly via WhatsApp. Proof is stored securely and attached to each compliance record.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">💬</div>
+          <h3>WhatsApp Reminders</h3>
+          <p>Automated reminders are sent to staff when tasks are pending or overdue. Staff can complete tasks and upload proof — all within WhatsApp.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">📊</div>
+          <h3>Compliance Dashboard</h3>
+          <p>Owners and managers get a live web dashboard showing compliance percentages, trend charts, overdue tasks, and staff performance leaderboards.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">👥</div>
+          <h3>Team Management</h3>
+          <p>Add staff members, assign roles (Owner, Manager, Supervisor, Staff), and control who sees what — all from the web app.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔔</div>
+          <h3>Instant Notifications</h3>
+          <p>New team members receive a WhatsApp welcome message with instructions. Task assignments trigger instant notifications to the responsible staff member.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── How It Works ──────────────────────────────────────── -->
+  <section class="how" id="how-it-works">
+    <div class="container">
+      <p class="section-label">How it works</p>
+      <h2>Set up once. Run every day, automatically.</h2>
+      <div class="steps">
+        <div class="step">
+          <div class="step-num">01</div>
+          <h3>Create your kitchen</h3>
+          <p>Sign up, name your kitchen, and set your timezone. Your organization is ready in under a minute.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">02</div>
+          <h3>Add your team</h3>
+          <p>Invite staff by name and phone number. They get a WhatsApp welcome message with everything they need to get started.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">03</div>
+          <h3>Define task templates</h3>
+          <p>Create recurring daily tasks — temperature checks, sanitation logs, equipment inspections — assigned to specific roles or individuals.</p>
+        </div>
+        <div class="step">
+          <div class="step-num">04</div>
+          <h3>Sit back &amp; monitor</h3>
+          <p>KitchenProof auto-generates daily tasks, sends WhatsApp reminders, collects proof, and feeds your compliance dashboard — hands-free.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── About ─────────────────────────────────────────────── -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-inner">
+        <p class="section-label">About KitchenProof</p>
+        <h2>Built for the realities of food operations.</h2>
+        <p>KitchenProof is an operations compliance platform designed specifically for dark kitchens, cloud restaurants, and food delivery operations. We understand that kitchen staff don't sit at desks — they work on the floor, and WhatsApp is already on their phone.</p>
+        <p>Our platform bridges the gap between compliance requirements and day-to-day kitchen reality. By meeting staff where they already are — on WhatsApp — we make it effortless to collect daily task completions and proof, giving operators the visibility they need to maintain standards and pass audits.</p>
+        <p>KitchenProof is developed and operated by a team committed to food safety, operational excellence, and the responsible use of technology in the hospitality industry.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Pricing ───────────────────────────────────────────── -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <p class="section-label">Pricing</p>
+      <h2>Simple, transparent pricing.</h2>
+      <p class="pricing-sub">No hidden fees. No per-message charges. Pay for your kitchen, not your staff count.</p>
+
+      <div class="pricing-grid">
+
+        <!-- Starter -->
+        <div class="pricing-card">
+          <div class="plan-name">Starter</div>
+          <div class="plan-price">
+            <span class="price-currency">₹</span>
+            <span class="price-amount">1,999</span>
+            <span class="price-period">/ month</span>
+          </div>
+          <p class="plan-desc">Perfect for a single outlet getting started with digital compliance.</p>
+          <ul class="plan-features">
+            <li><span class="check">✓</span> 1 kitchen location</li>
+            <li><span class="check">✓</span> Up to 10 staff members</li>
+            <li><span class="check">✓</span> Unlimited daily tasks</li>
+            <li><span class="check">✓</span> WhatsApp reminders &amp; completions</li>
+            <li><span class="check">✓</span> Photo proof collection</li>
+            <li><span class="check">✓</span> Compliance dashboard</li>
+            <li><span class="muted-li">✗</span> Multi-location support</li>
+            <li><span class="muted-li">✗</span> Priority support</li>
+          </ul>
+          <a href="mailto:aadeshcodes@gmail.com?subject=Starter Plan Inquiry" class="plan-btn plan-btn-outline">Get Started</a>
+        </div>
+
+        <!-- Growth — highlighted -->
+        <div class="pricing-card pricing-card-featured">
+          <div class="plan-badge">Most Popular</div>
+          <div class="plan-name">Growth</div>
+          <div class="plan-price">
+            <span class="price-currency">₹</span>
+            <span class="price-amount">4,999</span>
+            <span class="price-period">/ month</span>
+          </div>
+          <p class="plan-desc">For growing cloud kitchen brands operating across 2–5 locations.</p>
+          <ul class="plan-features">
+            <li><span class="check">✓</span> Up to 5 kitchen locations</li>
+            <li><span class="check">✓</span> Unlimited staff members</li>
+            <li><span class="check">✓</span> Unlimited daily tasks</li>
+            <li><span class="check">✓</span> WhatsApp reminders &amp; completions</li>
+            <li><span class="check">✓</span> Photo proof collection</li>
+            <li><span class="check">✓</span> Compliance dashboard &amp; trends</li>
+            <li><span class="check">✓</span> Multi-location support</li>
+            <li><span class="muted-li">✗</span> Dedicated account manager</li>
+          </ul>
+          <a href="mailto:aadeshcodes@gmail.com?subject=Growth Plan Inquiry" class="plan-btn plan-btn-primary">Get Started</a>
+        </div>
+
+        <!-- Enterprise -->
+        <div class="pricing-card">
+          <div class="plan-name">Enterprise</div>
+          <div class="plan-price price-custom">
+            <span class="price-amount">Custom</span>
+          </div>
+          <p class="plan-desc">For large operators, aggregator brands, and franchise chains with 5+ locations.</p>
+          <ul class="plan-features">
+            <li><span class="check">✓</span> Unlimited locations</li>
+            <li><span class="check">✓</span> Unlimited staff members</li>
+            <li><span class="check">✓</span> Unlimited daily tasks</li>
+            <li><span class="check">✓</span> WhatsApp reminders &amp; completions</li>
+            <li><span class="check">✓</span> Photo proof collection</li>
+            <li><span class="check">✓</span> Advanced analytics &amp; exports</li>
+            <li><span class="check">✓</span> Multi-location support</li>
+            <li><span class="check">✓</span> Dedicated account manager</li>
+          </ul>
+          <a href="mailto:aadeshcodes@gmail.com?subject=Enterprise Plan Inquiry" class="plan-btn plan-btn-outline">Contact Us</a>
+        </div>
+
+      </div>
+
+      <p class="pricing-note">All plans include a <strong>14-day free trial</strong>. No credit card required. Cancel anytime.</p>
+    </div>
+  </section>
+
+  <!-- ── Contact ────────────────────────────────────────────── -->
+  <section class="contact" id="contact">
+    <div class="container">
+      <h2>Get in touch</h2>
+      <p>Have questions about KitchenProof, or want to request a demo? We'd love to hear from you.</p>
+      <div class="contact-card">
+        <span>📧 Email us at</span>
+        <a href="mailto:aadeshcodes@gmail.com">aadeshcodes@gmail.com</a>
+        <span>We respond within 24 hours.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Footer ─────────────────────────────────────────────── -->
+  <footer>
+    <div class="container footer-inner">
+      <span>© 2026 KitchenProof. All rights reserved.</span>
+      <div class="footer-links">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Service</a>
+        <a href="data-deletion.html">Data Deletion</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── Replace this URL after deploying your Google Apps Script ──
+    const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwTzXeKj2tJ3nx2aJ1ULrO1tmcPiELbMYUPHzpF2OdCeL_D3wU7cMgjirMikBfUqi8/exec';
+
+    document.getElementById('waitlist-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const btn     = document.getElementById('wl-btn');
+      const btnText = document.getElementById('wl-btn-text');
+      const spinner = document.getElementById('wl-spinner');
+      const success = document.getElementById('wl-success');
+      const error   = document.getElementById('wl-error');
+
+      const name      = document.getElementById('wl-name').value.trim();
+      const email     = document.getElementById('wl-email').value.trim();
+      const kitchen   = document.getElementById('wl-kitchen').value.trim();
+      const locations = document.getElementById('wl-locations').value;
+
+      if (!name || !email) {
+        document.getElementById('wl-name').reportValidity();
+        document.getElementById('wl-email').reportValidity();
+        return;
+      }
+
+      // Loading state
+      btn.disabled  = true;
+      btnText.style.display = 'none';
+      spinner.style.display = 'inline';
+      success.style.display = 'none';
+      error.style.display   = 'none';
+
+      try {
+        if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
+          // Dev mode — log to console and simulate success
+          console.log('Waitlist submission:', { name, email, kitchen, locations });
+          await new Promise(r => setTimeout(r, 800));
+          success.style.display = 'block';
+          this.reset();
+          return;
+        }
+
+        const body = new FormData();
+        body.append('name', name);
+        body.append('email', email);
+        body.append('kitchen', kitchen);
+        body.append('locations', locations);
+        body.append('timestamp', new Date().toISOString());
+
+        await fetch(APPS_SCRIPT_URL, { method: 'POST', body });
+        success.style.display = 'block';
+        this.reset();
+      } catch (err) {
+        error.style.display = 'block';
+      } finally {
+        btn.disabled  = false;
+        btnText.style.display = 'inline';
+        spinner.style.display = 'none';
+      }
+    });
+  </script>
+</body>
+</html>
