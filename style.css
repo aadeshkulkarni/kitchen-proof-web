@@ -227,6 +227,77 @@ nav {
   margin-bottom: 0 !important;
 }
 
+/* ── AI Section ────────────────────────────────────────────── */
+.ai-section {
+  padding: 80px 0;
+  border-top: 1px solid var(--border);
+  background: linear-gradient(180deg, rgba(255,255,255,0.02) 0%, var(--bg) 100%);
+}
+.ai-section h2 {
+  font-size: clamp(26px, 4vw, 38px);
+  font-weight: 700;
+  letter-spacing: -0.8px;
+  margin-bottom: 12px;
+  max-width: 560px;
+}
+.ai-section-lead {
+  font-size: 17px;
+  color: var(--muted);
+  margin-bottom: 44px;
+  max-width: 480px;
+}
+.ai-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.ai-card {
+  padding: 26px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  transition: border-color 0.2s;
+}
+.ai-card:hover { border-color: rgba(255,255,255,0.18); }
+.ai-card-highlight {
+  border-color: rgba(255,255,255,0.14);
+  background: rgba(255,255,255,0.06);
+}
+.ai-card-coming-soon {
+  position: relative;
+  opacity: 0.92;
+}
+.ai-badge-coming-soon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  font-size: 10px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: var(--muted);
+}
+.ai-card-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.1);
+  display: grid;
+  place-items: center;
+  margin-bottom: 16px;
+  font-size: 20px;
+}
+.ai-card h3 { font-size: 17px; font-weight: 600; margin-bottom: 10px; }
+.ai-card p { font-size: 14px; color: var(--muted); line-height: 1.65; }
+
+@media (max-width: 640px) {
+  .ai-grid { grid-template-columns: 1fr; }
+}
+
 /* ── Features ─────────────────────────────────────────────── */
 .features { padding: 80px 0; border-top: 1px solid var(--border); }
 .section-label {
@@ -262,6 +333,9 @@ nav {
 .how { padding: 80px 0; border-top: 1px solid var(--border); }
 .how h2 { font-size: clamp(26px, 4vw, 38px); font-weight: 700; letter-spacing: -0.8px; margin-bottom: 52px; }
 .steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; }
+@media (min-width: 1000px) {
+  .steps { grid-template-columns: repeat(5, 1fr); }
+}
 .step { position: relative; }
 .step-num {
   font-size: 48px; font-weight: 800; letter-spacing: -2px;
