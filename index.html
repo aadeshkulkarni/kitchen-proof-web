@@ -3,72 +3,473 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KitchenProof — AI-Powered Compliance &amp; Proof for Cloud Kitchens</title>
-  <meta name="description" content="Run every kitchen like you're in it. WhatsApp task checklists, photo proof, AI daily briefings, and smart incident reporting — so operators know what's done and what's not, every day." />
+  <title>KitchenProof — AI-Powered Compliance & Proof for Cloud Kitchens</title>
+  <meta name="description" content="Run every kitchen like you're in it. WhatsApp checklists, photo proof, AI daily briefings, and smart incident reporting — so operators know what's done and what's not, every day." />
+  <meta name="theme-color" content="#06060b" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- ── Navigation ───────────────────────────────────────── -->
-  <nav>
-    <div class="container nav-inner">
-      <div class="logo">
-        <div class="logo-icon">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M3 6h18M3 12h18M3 18h18"/>
-          </svg>
+  <!-- ── Navigation ──────────────────────────────────────────── -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="nav-logo-icon">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13.87A4 4 0 0 1 7.41 6a5.11 5.11 0 0 1 1.05-1.54 5 5 0 0 1 7.08 0A5.11 5.11 0 0 1 16.59 6 4 4 0 0 1 18 13.87V21H6Z"/><line x1="6" y1="17" x2="18" y2="17"/></svg>
         </div>
         KitchenProof
-      </div>
+      </a>
       <div class="nav-links">
-        <a href="#protection">Why KitchenProof</a>
-        <a href="#ai">AI Features</a>
         <a href="#features">Features</a>
         <a href="#how-it-works">How It Works</a>
+        <a href="#ai">AI</a>
+        <a href="#protection">Why Us</a>
         <a href="#pricing">Pricing</a>
-        <a href="#contact">Contact</a>
       </div>
-      <a href="#waitlist" class="btn btn-primary">Request a Demo</a>
+      <div class="nav-cta">
+        <a href="#waitlist" class="btn btn-primary" style="font-size:13px; padding:8px 20px;">Get Early Access</a>
+        <button class="nav-hamburger" id="nav-hamburger" aria-label="Open menu">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        </button>
+      </div>
     </div>
   </nav>
 
-  <!-- ── Hero ─────────────────────────────────────────────── -->
+  <!-- Mobile menu overlay -->
+  <div class="mobile-menu" id="mobile-menu">
+    <button class="mobile-menu-close" id="mobile-menu-close" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <a href="#features" onclick="closeMobileMenu()">Features</a>
+    <a href="#how-it-works" onclick="closeMobileMenu()">How It Works</a>
+    <a href="#ai" onclick="closeMobileMenu()">AI</a>
+    <a href="#protection" onclick="closeMobileMenu()">Why Us</a>
+    <a href="#pricing" onclick="closeMobileMenu()">Pricing</a>
+    <a href="#waitlist" class="btn btn-primary" onclick="closeMobileMenu()">Get Early Access</a>
+  </div>
+
+  <!-- ── Hero ─────────────────────────────────────────────────── -->
   <section class="hero">
     <div class="container">
-      <div class="hero-badge">
-        <span class="pill">🤖 AI-Powered · Built for Cloud Kitchens</span>
-      </div>
-      <h1>Run every kitchen like<br /><span>you're standing inside it.</span></h1>
-      <p>Know what's done and what's not — every day. WhatsApp checklists, photo proof, and <strong>AI briefings</strong> give operators full visibility and audit-ready evidence without stepping foot on-site.</p>
-      <div class="hero-actions">
-        <a href="#waitlist" class="btn btn-primary">Request a Demo</a>
-        <a href="#ai" class="btn btn-outline">See AI Features</a>
+      <div class="hero-grid">
+        <div class="hero-content reveal">
+          <div class="hero-badge">
+            <span class="pill">🤖 AI-Powered Compliance</span>
+          </div>
+          <h1>Run every kitchen like <span class="hero-highlight">you're in it.</span></h1>
+          <p class="hero-sub">WhatsApp checklists, photo proof, and <strong>AI briefings</strong> give cloud kitchen operators full visibility — without stepping on-site.</p>
+          <div class="hero-actions">
+            <a href="#waitlist" class="btn btn-primary btn-lg">Request Early Access</a>
+            <a href="#features" class="btn btn-outline btn-lg">See How It Works →</a>
+          </div>
+        </div>
+        <div class="hero-visual reveal">
+          <div class="hero-mockup">
+            <div class="mockup-bar">
+              <div class="mockup-dot mockup-dot-r"></div>
+              <div class="mockup-dot mockup-dot-y"></div>
+              <div class="mockup-dot mockup-dot-g"></div>
+              <span class="mockup-bar-title">KitchenProof Dashboard</span>
+            </div>
+            <div class="mockup-body">
+              <!-- Header row -->
+              <div class="m-header">
+                <div>
+                  <div class="m-title">Operations Overview</div>
+                  <div class="m-date">Friday, 20 February 2026</div>
+                </div>
+                <div class="m-actions">
+                  <span class="m-action-btn">✦ Briefing</span>
+                  <span class="m-action-btn">↓ Report</span>
+                </div>
+              </div>
+              <!-- Stat cards -->
+              <div class="m-label">Today at a Glance</div>
+              <div class="m-stats">
+                <div class="m-stat m-stat-primary">
+                  <div class="m-stat-head">Today's Compliance</div>
+                  <div class="m-stat-big green">80%</div>
+                  <div class="m-stat-sub">8 of 10 tasks completed</div>
+                </div>
+                <div class="m-stat">
+                  <div class="m-stat-head">Completed</div>
+                  <div class="m-stat-big">8</div>
+                  <div class="m-stat-sub">Tasks done today</div>
+                </div>
+                <div class="m-stat">
+                  <div class="m-stat-head">Pending</div>
+                  <div class="m-stat-big amber">1</div>
+                  <div class="m-stat-sub">Still in progress</div>
+                </div>
+                <div class="m-stat">
+                  <div class="m-stat-head">Missed</div>
+                  <div class="m-stat-big">0</div>
+                  <div class="m-stat-sub">Past deadline</div>
+                </div>
+              </div>
+              <!-- Task list -->
+              <div class="m-panel">
+                <div class="m-panel-head">
+                  <span>Today's Task Summary</span>
+                  <div class="m-badges">
+                    <span class="m-badge m-badge-green">4 Completed</span>
+                    <span class="m-badge m-badge-amber">1 Pending</span>
+                  </div>
+                </div>
+                <div class="m-task-row">
+                  <span class="m-task-name">Morning Temperature Log</span>
+                  <span class="m-tag m-tag-done">Completed</span>
+                  <span class="m-task-time">06:15</span>
+                </div>
+                <div class="m-task-row">
+                  <span class="m-task-name">Handwash & Sanitization Audit</span>
+                  <span class="m-tag m-tag-done">Completed</span>
+                  <span class="m-task-time">07:30</span>
+                </div>
+                <div class="m-task-row">
+                  <span class="m-task-name">Cross-Contamination Check</span>
+                  <span class="m-tag m-tag-done">Completed</span>
+                  <span class="m-task-time">08:45</span>
+                </div>
+                <div class="m-task-row">
+                  <span class="m-task-name">Oil Quality & Fryer Safety</span>
+                  <span class="m-tag m-tag-done">Completed</span>
+                  <span class="m-task-time">10:00</span>
+                </div>
+                <div class="m-task-row">
+                  <span class="m-task-name">End-of-Day Deep Clean</span>
+                  <span class="m-tag m-tag-pending">Pending</span>
+                  <span class="m-task-time">21:00</span>
+                </div>
+              </div>
+              <!-- Bottom row: chart + leaderboard -->
+              <div class="m-label">Weekly Insights</div>
+              <div class="m-bottom">
+                <div class="m-chart-panel">
+                  <div class="m-chart-title">7-Day Compliance Trend</div>
+                  <div class="m-chart">
+                    <div class="m-chart-bar" style="height:62%"><span>Mon</span></div>
+                    <div class="m-chart-bar" style="height:78%"><span>Tue</span></div>
+                    <div class="m-chart-bar" style="height:55%"><span>Wed</span></div>
+                    <div class="m-chart-bar" style="height:90%"><span>Thu</span></div>
+                    <div class="m-chart-bar" style="height:84%"><span>Fri</span></div>
+                    <div class="m-chart-bar m-chart-bar-today" style="height:80%"><span>Today</span></div>
+                  </div>
+                </div>
+                <div class="m-lb-panel">
+                  <div class="m-chart-title">Leaderboard</div>
+                  <div class="m-lb-row">
+                    <span class="m-lb-rank">1</span>
+                    <span class="m-lb-avatar">RP</span>
+                    <span class="m-lb-name">Ragini Patidar</span>
+                    <span class="m-lb-score">5</span>
+                  </div>
+                  <div class="m-lb-row">
+                    <span class="m-lb-rank">2</span>
+                    <span class="m-lb-avatar">AK</span>
+                    <span class="m-lb-name">Aadee Kukani</span>
+                    <span class="m-lb-score">1</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
-  <!-- ── Pain Strip ────────────────────────────────────────── -->
-  <section class="pain-strip">
+  <!-- ── Metrics ──────────────────────────────────────────────── -->
+  <section class="metrics reveal">
+    <div class="container">
+      <div class="metrics-grid">
+        <div>
+          <div class="metric-value">94%</div>
+          <div class="metric-label">Avg. compliance rate</div>
+        </div>
+        <div>
+          <div class="metric-value">&lt;15m</div>
+          <div class="metric-label">Reminder-to-completion</div>
+        </div>
+        <div>
+          <div class="metric-value">0</div>
+          <div class="metric-label">Apps to install for staff</div>
+        </div>
+        <div>
+          <div class="metric-value">24/7</div>
+          <div class="metric-label">AI-powered monitoring</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Features ─────────────────────────────────────────────── -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="features-header reveal">
+        <p class="section-label">Features</p>
+        <h2>Accountability you can prove</h2>
+        <p>Everything you need to run compliant kitchens at scale.</p>
+      </div>
+      <div class="features-grid">
+        <div class="feature-card reveal">
+          <div class="feature-icon">✅</div>
+          <h3>Critical tasks never get skipped</h3>
+          <p>Automated daily checklists for opening, cleaning, temperature logs, and safety — assigned by role or person.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">📸</div>
+          <h3>Photo proof, time-stamped</h3>
+          <p>Staff submit proof via WhatsApp. Every task can have a photo attached — stored in one gallery for audits and reviews.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">📊</div>
+          <h3>One dashboard, all outlets</h3>
+          <p>Compliance %, trends, overdue tasks, staff leaderboard, and today's task summary — so you see risk before it escalates.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">📄</div>
+          <h3>PDF compliance reports</h3>
+          <p>Download weekly or monthly reports: summary, daily trend, leaderboard, incidents. Share with investors or auditors in one click.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">👤</div>
+          <h3>Clear ownership</h3>
+          <p>Every task and incident is tied to a person. Know who did what and who reported what — no ambiguity.</p>
+        </div>
+        <div class="feature-card reveal">
+          <div class="feature-icon">📱</div>
+          <h3>WhatsApp-first — zero training</h3>
+          <p>Staff use the app they already have. No downloads. Instant adoption, minimal friction.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── How It Works ─────────────────────────────────────────── -->
+  <section class="how" id="how-it-works">
+    <div class="container">
+      <div class="how-header reveal">
+        <p class="section-label">How it works</p>
+        <h2>Set up once. Stay audit-ready every day.</h2>
+        <p>Five steps from signup to full kitchen visibility.</p>
+      </div>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-num"></div>
+          <h3>Add your kitchens and team</h3>
+          <p>Invite staff by phone number — they start receiving tasks on WhatsApp instantly.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num"></div>
+          <h3>Define your SOPs once</h3>
+          <p>Create daily checklists for hygiene, safety, and operations — assigned to specific roles or individuals.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num"></div>
+          <h3>Automation runs every day</h3>
+          <p>Tasks, reminders, and proof collection happen automatically. No manual intervention needed.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num"></div>
+          <h3>Get your AI briefing</h3>
+          <p>Every morning, receive a WhatsApp summary. Need an update later? Reply <strong>BRIEFING</strong> for a fresh snapshot on demand.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num"></div>
+          <h3>Monitor from anywhere</h3>
+          <p>See compliance across all locations in one dashboard — on-site or across the city.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── AI Section ───────────────────────────────────────────── -->
+  <section class="ai-section" id="ai">
+    <div class="container">
+      <div class="ai-header reveal">
+        <p class="section-label">Powered by AI</p>
+        <h2>Your morning briefing. Your staff's smart assistant.</h2>
+        <p>AI that works for operators and staff — no extra effort, maximum visibility.</p>
+      </div>
+      <div class="ai-grid">
+        <div class="ai-card ai-card-highlight reveal">
+          <div class="ai-card-icon">📬</div>
+          <h3>Daily AI Briefing</h3>
+          <p>Every morning, get a concise WhatsApp summary: today's compliance %, overdue tasks, top performer. One message — you're in the loop before your first coffee.</p>
+        </div>
+        <div class="ai-card reveal">
+          <div class="ai-card-icon">💬</div>
+          <h3>Smart WhatsApp Agent</h3>
+          <p>Staff can say "I'm done" or "Temperature check complete" in plain language. AI understands intent and marks the right task — or guides them.</p>
+        </div>
+        <div class="ai-card reveal">
+          <div class="ai-card-icon">🚨</div>
+          <h3>AI Incident Reporting</h3>
+          <p>Staff report issues in their own words via WhatsApp. AI captures the incident, logs it, and notifies managers — so nothing slips through.</p>
+        </div>
+        <div class="ai-card reveal">
+          <div class="ai-card-icon">⏰</div>
+          <h3>Right-Time Reminders</h3>
+          <p>Reminders go out when each task is actually due. Early-morning tasks get reminded on time; no more "I saw it too late."</p>
+        </div>
+        <div class="ai-card ai-card-coming-soon reveal">
+          <span class="ai-badge-coming-soon">Coming soon</span>
+          <div class="ai-card-icon">🔍</div>
+          <h3>Proof Verification via Computer Vision</h3>
+          <p>AI-powered image analysis validates that uploaded proof photos match the task context — detecting irrelevant or duplicate imagery and flagging non-compliant submissions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Pain Strip ───────────────────────────────────────────── -->
+  <section class="pain-strip reveal">
     <div class="container">
       <p class="pain-headline">You're the operator. You need to know — not guess.</p>
       <p class="pain-body">Missed tasks. No proof. Surprise audits. KitchenProof gives you <strong>proof that it's done</strong>, <strong>AI summaries</strong> so you're always in the loop, and <strong>one dashboard</strong> for every outlet.</p>
     </div>
   </section>
 
-  <!-- ── Early Access / Waitlist ───────────────────────────── -->
+  <!-- ── Protection ───────────────────────────────────────────── -->
+  <section class="protection" id="protection">
+    <div class="container">
+      <div class="protection-header reveal">
+        <p class="section-label">Why it matters</p>
+        <h2>What KitchenProof protects you from</h2>
+        <p>Every one of these costs you money, reputation, or both.</p>
+      </div>
+      <div class="protection-grid">
+        <div class="protection-item reveal">
+          <span class="protection-x">✗</span>
+          <p>SOPs being skipped when you're not watching</p>
+        </div>
+        <div class="protection-item reveal">
+          <span class="protection-x">✗</span>
+          <p>Staff marking tasks done without actually doing them</p>
+        </div>
+        <div class="protection-item reveal">
+          <span class="protection-x">✗</span>
+          <p>Hygiene lapses that tank your ratings and reviews</p>
+        </div>
+        <div class="protection-item reveal">
+          <span class="protection-x">✗</span>
+          <p>Failed audits and compliance risk across outlets</p>
+        </div>
+        <div class="protection-item reveal">
+          <span class="protection-x">✗</span>
+          <p>Not knowing what's actually happening in your kitchens</p>
+        </div>
+      </div>
+      <div class="protection-closing reveal">
+        <p>If it's not documented with proof, it didn't happen.</p>
+        <p class="protection-cta-line">KitchenProof makes sure it is.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Positioning ──────────────────────────────────────────── -->
+  <section class="about" id="about">
+    <div class="container">
+      <div class="about-inner reveal">
+        <p class="section-label">Built for operators</p>
+        <h2>WhatsApp + AI + proof. No new apps for your team.</h2>
+        <p>Your staff already use WhatsApp. KitchenProof turns it into your control room: tasks, proof, and AI briefings so you're always in the loop.</p>
+        <p>One dashboard. One morning message. Full visibility — whether you run one kitchen or twenty.</p>
+        <p class="about-closer">Run every kitchen with the confidence of being in each one.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── Pricing ──────────────────────────────────────────────── -->
+  <section class="pricing" id="pricing">
+    <div class="container">
+      <div class="pricing-header reveal">
+        <p class="section-label">Pricing</p>
+        <h2>AI-powered operations at a price that scales.</h2>
+        <p class="pricing-sub">Pay per location — not per staff. <strong>AI features included</strong> on every plan. No per-message fees.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="pricing-card reveal">
+          <div class="plan-name">Starter</div>
+          <div class="plan-price">
+            <span class="price-currency">₹</span>
+            <span class="price-amount">2,499</span>
+            <span class="price-period">/ month</span>
+          </div>
+          <p class="plan-desc">Single outlet. Full accountability and AI from day one.</p>
+          <ul class="plan-features">
+            <li><span class="check">✓</span> 1 kitchen location</li>
+            <li><span class="check">✓</span> Up to 10 staff</li>
+            <li><span class="check">✓</span> Unlimited daily tasks</li>
+            <li><span class="check">✓</span> <strong>Daily AI briefing</strong></li>
+            <li><span class="check">✓</span> <strong>Smart WhatsApp agent</strong></li>
+            <li><span class="check">✓</span> Photo proof &amp; incident reporting</li>
+            <li><span class="check">✓</span> Compliance dashboard &amp; PDF reports</li>
+            <li><span class="muted-li">✗</span> Multi-location</li>
+          </ul>
+          <a href="mailto:aadeshcodes@gmail.com?subject=Starter Plan Inquiry" class="plan-btn plan-btn-outline">Get Started</a>
+        </div>
+
+        <div class="pricing-card pricing-card-featured reveal">
+          <div class="plan-badge">Best for operators</div>
+          <div class="plan-name">Growth</div>
+          <div class="plan-price">
+            <span class="price-currency">₹</span>
+            <span class="price-amount">5,999</span>
+            <span class="price-period">/ month</span>
+          </div>
+          <p class="plan-desc">Multiple kitchens. One view. AI briefings and proof across all outlets.</p>
+          <ul class="plan-features">
+            <li><span class="check">✓</span> Up to 5 locations</li>
+            <li><span class="check">✓</span> Unlimited staff</li>
+            <li><span class="check">✓</span> Unlimited tasks</li>
+            <li><span class="check">✓</span> <strong>Daily AI briefing</strong> (all locations)</li>
+            <li><span class="check">✓</span> <strong>Smart WhatsApp agent</strong> &amp; incident AI</li>
+            <li><span class="check">✓</span> Proof gallery, incidents dashboard, PDF reports</li>
+            <li><span class="check">✓</span> 7 &amp; 30-day compliance trends</li>
+            <li><span class="muted-li">✗</span> Dedicated account manager</li>
+          </ul>
+          <a href="mailto:aadeshcodes@gmail.com?subject=Growth Plan Inquiry" class="plan-btn plan-btn-primary">Get Started</a>
+        </div>
+
+        <div class="pricing-card reveal">
+          <div class="plan-name">Enterprise</div>
+          <div class="plan-price price-custom">
+            <span class="price-amount">Custom</span>
+          </div>
+          <p class="plan-desc">Large multi-city operations. Full AI stack and white-glove support.</p>
+          <ul class="plan-features">
+            <li><span class="check">✓</span> Unlimited locations &amp; staff</li>
+            <li><span class="check">✓</span> All AI features</li>
+            <li><span class="check">✓</span> Advanced analytics &amp; exports</li>
+            <li><span class="check">✓</span> Proof gallery &amp; incident tracking</li>
+            <li><span class="check">✓</span> Dedicated account manager</li>
+            <li><span class="check">✓</span> Priority support &amp; onboarding</li>
+          </ul>
+          <a href="mailto:aadeshcodes@gmail.com?subject=Enterprise Plan Inquiry" class="plan-btn plan-btn-outline">Contact Us</a>
+        </div>
+      </div>
+
+      <p class="pricing-note reveal">Every plan includes <strong>AI briefings</strong> and <strong>smart WhatsApp</strong>. <strong>14-day free trial</strong> — no card required.</p>
+    </div>
+  </section>
+
+  <!-- ── Waitlist ─────────────────────────────────────────────── -->
   <section class="waitlist" id="waitlist">
     <div class="container">
       <div class="waitlist-inner">
-        <div class="waitlist-text">
+        <div class="waitlist-text reveal">
           <div class="hero-badge" style="margin-bottom:16px;">
             <span class="pill">🚀 Early Access</span>
           </div>
-          <h2>Early Access for Cloud Kitchen Operators</h2>
+          <h2>Join the early access program</h2>
           <p>We're onboarding a limited number of multi-location operators during our early access phase.</p>
-          <p style="margin-bottom:20px; color: var(--muted); font-size:15px;">Join now to:</p>
           <ul class="waitlist-perks">
             <li>✓ Lock in early pricing (AI features included)</li>
             <li>✓ Get priority onboarding</li>
@@ -76,7 +477,7 @@
             <li>✓ Receive 3 months free on launch</li>
           </ul>
         </div>
-        <div class="waitlist-form-wrap">
+        <div class="waitlist-form-wrap reveal">
           <form id="waitlist-form" class="waitlist-form" novalidate>
             <div class="form-field">
               <label for="wl-name">Your name</label>
@@ -112,255 +513,18 @@
     </div>
   </section>
 
-  <!-- ── Protection / Value ────────────────────────────────── -->
-  <section class="protection" id="protection">
-    <div class="container">
-      <p class="section-label">Why it matters</p>
-      <h2>What KitchenProof Protects You From</h2>
-      <div class="protection-grid">
-        <div class="protection-item">
-          <span class="protection-x">✗</span>
-          <span>SOPs being skipped</span>
-        </div>
-        <div class="protection-item">
-          <span class="protection-x">✗</span>
-          <span>Staff marking tasks complete without doing them</span>
-        </div>
-        <div class="protection-item">
-          <span class="protection-x">✗</span>
-          <span>Hygiene lapses that hurt ratings</span>
-        </div>
-        <div class="protection-item">
-          <span class="protection-x">✗</span>
-          <span>Failed audits and compliance risks</span>
-        </div>
-        <div class="protection-item">
-          <span class="protection-x">✗</span>
-          <span>Not knowing what's happening across outlets</span>
-        </div>
-      </div>
-      <div class="protection-closing">
-        <p>If it's not documented with proof, it didn't happen.</p>
-        <p class="protection-cta-line">KitchenProof makes sure it is.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── AI Section ─────────────────────────────────────────── -->
-  <section class="ai-section" id="ai">
-    <div class="container">
-      <p class="section-label">Powered by AI</p>
-      <h2>Your morning briefing. Your staff's smart assistant.</h2>
-      <p class="ai-section-lead">AI that works for operators and staff — no extra effort, maximum visibility.</p>
-      <div class="ai-grid">
-        <div class="ai-card ai-card-highlight">
-          <div class="ai-card-icon">📬</div>
-          <h3>Daily AI Briefing</h3>
-          <p>Every morning, get a concise WhatsApp summary: today's compliance %, overdue tasks, top performer. One message — you're in the loop before your first coffee.</p>
-        </div>
-        <div class="ai-card">
-          <div class="ai-card-icon">💬</div>
-          <h3>Smart WhatsApp Agent</h3>
-          <p>Staff don't need keywords. They can say "I'm done" or "Temperature check complete" in plain language. AI understands intent and marks the right task — or guides them.</p>
-        </div>
-        <div class="ai-card ai-card-coming-soon">
-          <span class="ai-badge-coming-soon">Coming soon</span>
-          <div class="ai-card-icon">🔍</div>
-          <h3>Proof Verification</h3>
-          <p>AI-powered image analysis validates that uploaded proof photos match the task context — detecting irrelevant or duplicate imagery and flagging submissions that don't meet compliance standards. Reduces fake or off-topic proof at scale.</p>
-        </div>
-        <div class="ai-card">
-          <div class="ai-card-icon">🚨</div>
-          <h3>AI Incident Reporting</h3>
-          <p>Staff report issues in their own words via WhatsApp. AI captures the incident, logs it in your dashboard, and notifies managers — so nothing slips through.</p>
-        </div>
-        <div class="ai-card">
-          <div class="ai-card-icon">⏰</div>
-          <h3>Right-Time Reminders</h3>
-          <p>Reminders go out when each task is actually due, not in one batch. Early-morning tasks get reminded on time; no more "I saw it too late."</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Features / Outcomes ───────────────────────────────── -->
-  <section class="features" id="features">
-    <div class="container">
-      <p class="section-label">Features</p>
-      <h2>Accountability you can prove</h2>
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">✅</div>
-          <h3>Critical tasks never get skipped</h3>
-          <p>Automated daily checklists for opening, cleaning, temperature logs, and safety — assigned by role or person.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📸</div>
-          <h3>Photo proof, time-stamped</h3>
-          <p>Staff submit proof via WhatsApp. Every task can have a photo attached — stored in one gallery for audits and reviews.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📊</div>
-          <h3>One dashboard, all outlets</h3>
-          <p>Compliance %, trends, overdue tasks, staff leaderboard, and today's task summary — so you see risk before it becomes a problem.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📄</div>
-          <h3>PDF compliance reports</h3>
-          <p>Download weekly or monthly reports: summary, daily trend, leaderboard, incidents. Share with investors or auditors in one click.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">👤</div>
-          <h3>Clear ownership</h3>
-          <p>Every task and incident is tied to a person. Know who did what and who reported what — no ambiguity.</p>
-        </div>
-        <div class="feature-card">
-          <div class="feature-icon">📱</div>
-          <h3>WhatsApp-first — zero training</h3>
-          <p>Staff use the app they already have. No new downloads. Instant adoption, minimal friction.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── How It Works ──────────────────────────────────────── -->
-  <section class="how" id="how-it-works">
-    <div class="container">
-      <p class="section-label">How it works</p>
-      <h2>Set up once. Stay audit-ready every day.</h2>
-      <div class="steps">
-        <div class="step">
-          <div class="step-num">01</div>
-          <h3>Add your kitchens and team</h3>
-          <p>Invite staff by phone number — they start receiving tasks on WhatsApp instantly.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">02</div>
-          <h3>Define your SOPs once</h3>
-          <p>Create daily checklists for hygiene, safety, and operations — assigned to specific roles or individuals.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">03</div>
-          <h3>Automation runs every day</h3>
-          <p>Tasks, reminders, and proof collection happen automatically. No manual intervention needed.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">04</div>
-          <h3>Get your AI briefing — daily or anytime</h3>
-          <p>Every morning you receive a concise WhatsApp summary: compliance %, overdue tasks, top performer. Need an update later? Reply <strong>BRIEFING</strong> and get a fresh snapshot on demand.</p>
-        </div>
-        <div class="step">
-          <div class="step-num">05</div>
-          <h3>Monitor from anywhere</h3>
-          <p>See compliance across all locations in one dashboard — whether you're on-site or halfway across the city.</p>
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Positioning ───────────────────────────────────────── -->
-  <section class="about" id="about">
-    <div class="container">
-      <div class="about-inner">
-        <p class="section-label">Built for operators</p>
-        <h2>WhatsApp + AI + proof. No new apps for your team.</h2>
-        <p>Your staff already use WhatsApp. KitchenProof turns it into your control room: tasks, proof, and AI briefings so you're always in the loop.</p>
-        <p>One dashboard. One morning message. Full visibility — whether you run one kitchen or twenty.</p>
-        <p class="about-closer">Run every kitchen with the confidence of being in each one.</p>
-      </div>
-    </div>
-  </section>
-
-  <!-- ── Pricing ───────────────────────────────────────────── -->
-  <section class="pricing" id="pricing">
-    <div class="container">
-      <p class="section-label">Pricing</p>
-      <h2>AI-powered operations at a price that scales.</h2>
-      <p class="pricing-sub">Pay per location — not per staff. <strong>AI features included</strong> on every plan. No per-message fees.</p>
-
-      <div class="pricing-grid">
-
-        <!-- Starter -->
-        <div class="pricing-card">
-          <div class="plan-name">Starter</div>
-          <div class="plan-price">
-            <span class="price-currency">₹</span>
-            <span class="price-amount">2,499</span>
-            <span class="price-period">/ month</span>
-          </div>
-          <p class="plan-desc">Single outlet. Full accountability and AI from day one.</p>
-          <ul class="plan-features">
-            <li><span class="check">✓</span> 1 kitchen location</li>
-            <li><span class="check">✓</span> Up to 10 staff</li>
-            <li><span class="check">✓</span> Unlimited daily tasks</li>
-            <li><span class="check">✓</span> <strong>Daily AI briefing</strong> (WhatsApp)</li>
-            <li><span class="check">✓</span> <strong>Smart WhatsApp agent</strong> (natural language)</li>
-            <li><span class="check">✓</span> Photo proof &amp; incident reporting</li>
-            <li><span class="check">✓</span> Compliance dashboard &amp; PDF reports</li>
-            <li><span class="muted-li">✗</span> Multi-location</li>
-          </ul>
-          <a href="mailto:aadeshcodes@gmail.com?subject=Starter Plan Inquiry" class="plan-btn plan-btn-outline">Get Started</a>
-        </div>
-
-        <!-- Growth — highlighted -->
-        <div class="pricing-card pricing-card-featured">
-          <div class="plan-badge">Best for operators</div>
-          <div class="plan-name">Growth</div>
-          <div class="plan-price">
-            <span class="price-currency">₹</span>
-            <span class="price-amount">5,999</span>
-            <span class="price-period">/ month</span>
-          </div>
-          <p class="plan-desc">Multiple kitchens. One view. AI briefings and proof across all outlets.</p>
-          <ul class="plan-features">
-            <li><span class="check">✓</span> Up to 5 locations</li>
-            <li><span class="check">✓</span> Unlimited staff</li>
-            <li><span class="check">✓</span> Unlimited tasks</li>
-            <li><span class="check">✓</span> <strong>Daily AI briefing</strong> (all locations)</li>
-            <li><span class="check">✓</span> <strong>Smart WhatsApp agent</strong> &amp; incident AI</li>
-            <li><span class="check">✓</span> Proof gallery, incidents dashboard, PDF reports</li>
-            <li><span class="check">✓</span> 7 &amp; 30-day compliance trends</li>
-            <li><span class="muted-li">✗</span> Dedicated account manager</li>
-          </ul>
-          <a href="mailto:aadeshcodes@gmail.com?subject=Growth Plan Inquiry" class="plan-btn plan-btn-primary">Get Started</a>
-        </div>
-
-        <!-- Enterprise -->
-        <div class="pricing-card">
-          <div class="plan-name">Enterprise</div>
-          <div class="plan-price price-custom">
-            <span class="price-amount">Custom</span>
-          </div>
-          <p class="plan-desc">Large multi-city operations. Full AI stack and white-glove support.</p>
-          <ul class="plan-features">
-            <li><span class="check">✓</span> Unlimited locations &amp; staff</li>
-            <li><span class="check">✓</span> All AI features (briefing, agent, incidents)</li>
-            <li><span class="check">✓</span> Advanced analytics &amp; exports</li>
-            <li><span class="check">✓</span> Proof gallery &amp; incident tracking</li>
-            <li><span class="check">✓</span> Dedicated account manager</li>
-            <li><span class="check">✓</span> Priority support &amp; onboarding</li>
-          </ul>
-          <a href="mailto:aadeshcodes@gmail.com?subject=Enterprise Plan Inquiry" class="plan-btn plan-btn-outline">Contact Us</a>
-        </div>
-
-      </div>
-
-      <p class="pricing-note">Every plan includes <strong>AI briefings</strong> and <strong>smart WhatsApp</strong>. <strong>14-day free trial</strong> — no card required. Cancel anytime.</p>
-    </div>
-  </section>
-
-  <!-- ── Final CTA ─────────────────────────────────────────── -->
+  <!-- ── Final CTA ────────────────────────────────────────────── -->
   <section class="final-cta">
-    <div class="container">
-      <h2>You're the operator. You deserve to know.</h2>
+    <div class="container reveal">
+      <h2>You're the operator.<br/>You deserve to know.</h2>
       <p>AI briefings, photo proof, and one dashboard — so every kitchen runs right, even when you're not there.</p>
-      <a href="#waitlist" class="btn btn-primary final-cta-btn">Request a Demo</a>
+      <a href="#waitlist" class="btn btn-accent btn-lg" style="position:relative;">Request a Demo</a>
     </div>
   </section>
 
-  <!-- ── Contact ────────────────────────────────────────────── -->
+  <!-- ── Contact ──────────────────────────────────────────────── -->
   <section class="contact" id="contact">
-    <div class="container">
+    <div class="container reveal">
       <h2>Talk to the team</h2>
       <p>Want a walkthrough or have questions?</p>
       <div class="contact-card">
@@ -371,25 +535,52 @@
     </div>
   </section>
 
-  <!-- ── Footer ─────────────────────────────────────────────── -->
-  <footer>
+  <!-- ── Footer ───────────────────────────────────────────────── -->
+  <footer class="footer">
     <div class="container footer-inner">
       <span>© 2026 KitchenProof. All rights reserved.</span>
       <div class="footer-links">
-        <a href="privacy.html">Privacy Policy</a>
-        <a href="terms.html">Terms of Service</a>
+        <a href="privacy.html">Privacy</a>
+        <a href="terms.html">Terms</a>
         <a href="data-deletion.html">Data Deletion</a>
         <a href="#contact">Contact</a>
       </div>
     </div>
   </footer>
 
+  <!-- ═══════════════════════════════════════════════════════════
+       Scripts
+       ═══════════════════════════════════════════════════════════ -->
   <script>
+    /* ── Nav: transparent → solid on scroll ───────────────────── */
+    const nav = document.getElementById('nav');
+    const onScroll = () => nav.classList.toggle('scrolled', window.scrollY > 20);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    /* ── Mobile menu ──────────────────────────────────────────── */
+    const mobileMenu = document.getElementById('mobile-menu');
+    document.getElementById('nav-hamburger').addEventListener('click', () => mobileMenu.classList.add('open'));
+    document.getElementById('mobile-menu-close').addEventListener('click', () => mobileMenu.classList.remove('open'));
+    function closeMobileMenu() { mobileMenu.classList.remove('open'); }
+
+    /* ── Scroll reveal (IntersectionObserver) ─────────────────── */
+    const reveals = document.querySelectorAll('.reveal');
+    const revealObs = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          revealObs.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+    reveals.forEach(el => revealObs.observe(el));
+
+    /* ── Waitlist form ────────────────────────────────────────── */
     const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbwTzXeKj2tJ3nx2aJ1ULrO1tmcPiELbMYUPHzpF2OdCeL_D3wU7cMgjirMikBfUqi8/exec';
 
     document.getElementById('waitlist-form').addEventListener('submit', async function (e) {
       e.preventDefault();
-
       const btn     = document.getElementById('wl-btn');
       const btnText = document.getElementById('wl-btn-text');
       const spinner = document.getElementById('wl-spinner');
@@ -415,13 +606,11 @@
 
       try {
         if (!APPS_SCRIPT_URL || APPS_SCRIPT_URL === 'YOUR_GOOGLE_APPS_SCRIPT_URL_HERE') {
-          console.log('Waitlist submission:', { name, email, kitchen, locations });
           await new Promise(r => setTimeout(r, 800));
           success.style.display = 'block';
           this.reset();
           return;
         }
-
         const body = new FormData();
         body.append('name', name);
         body.append('email', email);
